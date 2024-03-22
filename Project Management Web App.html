@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="taskOperation">
+            <div class="addCon" id="addCon">
+                <div id="ProjectInfo">
+                    <H1>Enter The basic details of your project.</H1>
+                    <div><label for="Name">Project Name</label>
+                        <input type="text" name="Name" class="PRinput" id="PRname" placeholder="Name" required>
+                    </div>
+                    <div>
+                        <label for="Description">Project Description</label>
+                        <Textarea class="PRinput" id="PRdes" placeholder="Description" required></Textarea>
+                    </div>
+                    <input type="button" id="CreateButton" value="Create Project">
+                </div>
+
+            </div>
+        </div>
+        <div class="Adder"><button id="addButton" onclick="popup()">+</button></div>
+        <div id="box1">
+            <div id="info">
+                <h1>Hi Anshul</h1>
+                <h5>Welcome back to the workspace, we missed You!</h5>
+                <input type="text" class="search" placeholder="Search Task or Projet.." id="search">
+            </div>
+            <h3>Projects <span id="totalProjects">(0)</span></h3>
+            <div id="grid-list">
+            </div>
+        </div>
+        <div id="box2">
+            <h1 id="projectName">Project Name</h1>
+            <h5 id="projectDescription">Please select any project and if there is no project create one.</h5>
+            <div id="today">
+                <h3>Today</h3>
+                <select name="operation" id="operation" onchange="Operation('operation','TodayTask')">
+                    <option value="0">☰</option>
+                    <option class="Add" value="Add">Add</option>
+                    <option class="Edit" value="Edit">Edit</option>
+                    <option class="Delete" value="Delete">Delete</option>
+                </select>
+            </div>
+            <hr>
+            <div class="todayTask" id="TodayTask">
+                Create Project First
+            </div>
+            <div id="upcoming">
+                <h3>Upcoming</h3> 
+                <select name="operation" id="upcomingOperation" onchange="Operation('upcomingOperation','upcomingTask')">
+                    <option value="0">☰</option>
+                    <option class="Add" value="Add">Add</option>
+                    <option class="Edit" value="Edit">Edit</option>
+                    <option class="Delete" value="Delete">Delete</option>
+                </select>
+            </div>
+            <hr>
+            <div class="todayTask" id="upcomingTask">
+                Create Project First
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
